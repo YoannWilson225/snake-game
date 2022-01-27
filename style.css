@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+
+body {
+    padding: 0;
+    margin: 0;
+    background: #000;
+    min-height: 100vh;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+li {
+    list-style: none;
+}
+
+a:hover {
+    color: red;
+}
+
+.logo {
+    font-size: xx-large;
+    font-weight: 700;
+    position: absolute;
+    top: 5px;
+}
+
+
+#header {
+    background-color: white;
+}
+
+.navbar {
+    display: flex;
+
+}
+
+.local-links {
+    display: flex;
+}
+
+.local-links li {
+    padding-left:25px;
+}
+
+.social-links {
+    display: flex;
+    padding-left: 45%;
+}
+
+.social-links li {
+    padding-left:25px;
+}
+
+.only {
+    display: flex;
+    margin-left: 130%;
+}
+
+.content {
+  position: relative;
+}
+
+.content h2 {
+  color: #fff;
+  font-size: 8em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  margin-top: 5%;
+  left: 50%;
+}
+
+.content h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px white;
+}
+
+.content h2:nth-child(2) {
+  color: white;
+  animation: animate 4s ease-in-out infinite;
+}
+
+
+.img_accueil {
+    width: 40%;
+    position: absolute;
+    top: 27%;
+    left: 30%;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      16% 44%,
+      33% 50%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
