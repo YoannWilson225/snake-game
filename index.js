@@ -117,7 +117,7 @@ function drawScore() {
 }
 
 function clearScreen() {
-  ctx.fillStyle = "black";
+  ctx.fillStyle = "white";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 

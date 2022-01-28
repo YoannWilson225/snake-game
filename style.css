@@ -24,9 +24,6 @@ li {
     list-style: none;
 }
 
-a:hover {
-    color: red;
-}
 
 .logo {
     font-size: xx-large;
@@ -127,4 +124,143 @@ a:hover {
       0% 100%
     );
   }
+}
+
+.glow-on-hover {
+  top: 89%;
+  left: 80%;
+  width: 220px;
+  height: 50px;
+  border: 1px solid white;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: absolute;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+
+.card {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 0 30px 30px -15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card p {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.card ul {
+  list-style: none;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+}
+
+.card ul li {
+  width: 24px;
+  height: 24px;    
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.card ul li:hover {
+  transform: scale(1.1);
+}
+
+#red {
+  background-color: #ef5350;
+}
+#green {
+  background-color: #66bb6a;
+}
+#amber {
+  background-color: #ffca28;
+}
+#blue {
+  background-color: #42a5f5;
+}
+#gray {
+  background-color: #bdbdbd;
+}
+
+/* Color selected styles */
+
+body.red {
+  background-color: #ef5350;
+  color:  #ef5350;
+}
+body.green {
+  background-color: #66bb6a;
+  color: #66bb6a;
+}
+body.amber {
+  background-color: #ffca28;
+  color: #ffca28;
+}
+body.blue {
+  background-color: #42a5f5;
+  color: #42a5f5;
+}
+body.gray {
+  background-color: #bdbdbd;
+  color: #bdbdbd;
 }
